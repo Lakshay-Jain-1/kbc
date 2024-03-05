@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+body{
+  background-color: lightblue;
+}
+    
+    .sidebar-container {
+      display: flex;
+      flex-direction: column;
+
+      width: 100px;
+      border: 2px solid black;
+      align-items: center;
+      border-radius: 32%;
+      margin-left: 30px;
+    }
+
+    .sidebar {
+      display: inline-block;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #hide {
+      position: fixed;
+      left: 0;
+      margin-right: 10px;
+      height: 40px;
+      background-color: lightgreen;
+    }
+
+    .option {
+      border: 2px solid black;
+      height: 15px;
+      border-radius: 25%;
+      padding: 20px;
+      background-color: lightgreen;
+
+    }
+    h5{
+      z-index:1;
+    }
+    #container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 600px;
+      width: 600px;
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      z-index:0;
+    }
+    canvas {
+     
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <button id="hide" type="button"> HIDE </button>
+    <div id="flex-box" style="display: flex; flex-direction: column-reverse; margin-top: 50px; gap: 10px;" >
+    <div class="sidebar-container" id="sidebar">
+      <h4 class="sidebar">7 crore </h4>
+      <h4 class="sidebar">5 crore </h4>
+      <h4 class="sidebar">1 crore </h4>
+      <h4 class="sidebar">50 Lakh </h4>
+      <h4 class="sidebar"> 25 Lakh</h4>
+      <h4 class="sidebar"> 5 Lakh</h4>
+      <h4 class="sidebar"> 1 Lakh</h4>
+
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2,1fr);">
+      <button id="fifty-fifty" style="width:100px; height: 30px;"> 50:50</button>
+      <button style="width:100px; height: 30px;"> Phone</button>
+      <button style="width:100px; height: 30px;"> Video 
+                 Call</button>
+      <button id="audience" style="width:100px; height: 30px;"> Audience 
+          Poll</button>
+    </div>
+    </div>
+    <div>
+      <h1 style="text-align: center; font-weight: 900; display: inline-block; margin-left: 20px; ">Kaun Banega Crorepati
+      </h1>
+      <div>
+        <h5 style="text-align: center;">QUESTION</h5>
+      </div>
+      <div>
+        <h4 id="timer"
+          style="border: 2px solid black; border-radius: 
+           50%;text-align: center; width: 50px; height: 50px; margin-left: 150px; display: flex; align-items: center;justify-content: center;">
+          60</h4>
+      </div>
+      <div id="main" style="display: grid; grid-template-columns: repeat(2,1fr); column-gap: 17px;">
+        <h5 class="option place remove">djdndndnndnnn</h5>
+        <h5 class="option place remove">djd</h5>
+        <h5 class="option place remove">djd</h5>
+        <h5 class="option  remove">djd</h5>
+        <h5 style="display: none;">ANSWER</h5>
+
+
+      </div>
+    </div>
+
+  </div>
+  
+  <div id="container" >
+  <canvas id="mycanvas"> </canvas>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+   <script src="user_helper.js"></script>
+
+
+</body>
+
+</html>
